@@ -2,12 +2,14 @@ package com.mdvb.ecommerce_api.controller;
 
 import com.mdvb.ecommerce_api.model.entities.ClickCount;
 import com.mdvb.ecommerce_api.service.ClickCountService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin(origins = "http://teste.sitedoicaro.com.br.s3-website-us-east-1.amazonaws.com")
 @RequestMapping("/click-count")
 public class ClickCountController {
     private final ClickCountService clickCountService;
